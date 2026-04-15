@@ -36,6 +36,9 @@ class HomeActivity : AppCompatActivity() {
         binding.cartBtn.setOnClickListener {
             startActivity(Intent(this, CartActivity::class.java))
         }
+        binding.profileBtn.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
         binding.logoutBtn.setOnClickListener {
             Session.logout(); startLogin()
         }

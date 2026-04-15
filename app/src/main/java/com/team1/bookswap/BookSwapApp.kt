@@ -14,6 +14,7 @@ class BookSwapApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        ThemePrefs.apply(ThemePrefs.load(this))
         scope.launch { seedIfEmpty() }
     }
 

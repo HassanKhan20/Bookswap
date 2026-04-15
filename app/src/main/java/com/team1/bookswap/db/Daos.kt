@@ -39,6 +39,9 @@ interface TextbookDao {
 
     @Query("SELECT COUNT(*) FROM textbooks")
     suspend fun count(): Int
+
+    @Query("SELECT COUNT(*) FROM textbooks WHERE sellerId = :sellerId")
+    suspend fun countBySeller(sellerId: Int): Int
 }
 
 @Dao
