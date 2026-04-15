@@ -3,6 +3,7 @@ package com.team1.bookswap.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.team1.bookswap.BookCovers
 import com.team1.bookswap.databinding.ItemTextbookBinding
 import com.team1.bookswap.db.Textbook
 
@@ -33,6 +34,7 @@ class TextbookAdapter(
         h.b.author.text = t.author
         h.b.price.text = "$" + String.format("%.2f", t.price)
         h.b.course.text = t.course
+        h.b.cover.setImageResource(BookCovers.forTitle(t.title))
         h.b.root.setOnClickListener { onClick(t) }
     }
 

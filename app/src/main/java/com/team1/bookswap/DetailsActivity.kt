@@ -30,6 +30,7 @@ class DetailsActivity : AppCompatActivity() {
             val t = withContext(Dispatchers.IO) { db.textbookDao().findById(bookId) }
             if (t == null) { toast("Book not found"); finish(); return@launch }
             book = t
+            binding.cover.setImageResource(BookCovers.forTitle(t.title))
             binding.title.text = t.title
             binding.author.text = "by ${t.author}"
             binding.price.text = "$" + String.format("%.2f", t.price)

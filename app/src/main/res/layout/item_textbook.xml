@@ -10,10 +10,13 @@
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground">
 
-    <View
+    <ImageView
+        android:id="@+id/cover"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@drawable/bg_book_cover" />
+        android:layout_height="160dp"
+        android:background="@drawable/bg_book_cover"
+        android:scaleType="centerCrop"
+        android:contentDescription="Book cover" />
 
     <TextView
         android:id="@+id/title"

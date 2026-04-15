@@ -32,11 +32,14 @@
                 android:insetBottom="0dp"
                 xmlns:app="http://schemas.android.com/apk/res-auto" />
 
-            <View
+            <ImageView
+                android:id="@+id/cover"
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
+                android:layout_height="280dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_book_cover" />
+                android:background="@drawable/bg_book_cover"
+                android:scaleType="fitCenter"
+                android:contentDescription="Book cover" />
         </LinearLayout>
 
         <LinearLayout
